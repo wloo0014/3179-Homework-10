@@ -9,11 +9,13 @@
         <title>Homework Week 9</title>
     </head>
     <body>
-        <h1>HI</h1>
-        <div id="mymap"></div>
+        <div id="mapVis">
+        </div>
         <script type="text/javascript">
-            var mapSpec = "data/vegalite.vg.json";
-            vegaEmbed("#mymap", mapSpec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
-        </script>
+            var spec2 = "data/vegalite.vg.json";
+            vegaEmbed('#mapVis', spec2).then(function(result) {
+              // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            }).catch(console.error);
+          </script>
     </body>
 </html>

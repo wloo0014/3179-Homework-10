@@ -1,4 +1,4 @@
-Country,Year,Status,Population,Hepatitis B,Measles,Polio,Diphtheria,HIV/AIDS,infant deaths,under-five deaths,Total expenditure,GDP,BMI,thinness  1-19 years,Alcohol,Schooling,Life expectancy
+Country,Year,Status,Population,Hepatitis_B,Measles,Polio,Diphtheria,HIV/AIDS,infant deaths,under-five_deaths,Total_expenditure,GDP,BMI,thinness_1-19_years,Alcohol,Schooling,Life_expectancy
 Brunei Darussalam,2015,Developing,,99,4,99,99,0.1,0,0,,3967.8951,41.2,5.7,,14.9,77.7
 Cambodia,2015,Developing,15517635,89,0,87,89,0.2,10,12,,1163.18977,19.6,1.9,,10.9,68.7
 Indonesia,2015,Developing,258162113,78,15099,8,78,0.3,114,136,,3336.16686,27.4,1.4,,12.9,69.1

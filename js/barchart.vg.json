@@ -1,0 +1,80 @@
+{
+	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+	"title": "South East Asia average BMI (2000-2015)",
+	"width": 800,
+	"height": 400,
+	"data": {
+		"url": "data/life_expectancy_ASEAN_cleaned.csv",
+		"format": {
+			"type": "csv",
+			"parse": {
+				"Year": "number",
+				"Population": "number",
+				"Measles": "number",
+				"Polio": "number",
+				"Total_expenditure": "number",
+				"GDP": "number",
+				"BMI": "number",
+				"Schooling": "number",
+				"Life expectancy": "number"
+			}
+		}
+	},
+	"params": [
+		{
+			"name": "year_param",
+			"select": {"type": "point", "fields": ["Year"]},
+			"value": 2000,
+			"bind": {
+				"Year": {"input": "range", "min": 2000, "max": 2015, "step": 1}
+			}
+		}
+	],
+	"transform": [
+		{"filter": {"param": "year_param"}}
+	],
+	"encoding": {
+		"x": {
+			"field": "Country", "type": "nominal",
+			"sort": "ascending"
+		},
+		"y": {
+			"field": "BMI", "type": "quantitative",
+			"axis": {"format": "s"},
+			"sort": "ascending",
+			"scale": {
+				"domain": [0, 45]
+			}
+		},
+		"color": {
+			"field": "Country",
+			"scale": {"range": ["#e60049", "#0bb4ff", "#50e991", "#e6d800", "#9b19f5", "#ffa300", "#dc0ab4", "#b3d4ff", "#00bfa0", "#7c1158"]},
+			"legend": {"orient": "top", "title": "Countries"}
+		},
+		"tooltip": [
+			{"field": "Country", "type": "nominal"},
+			{"field": "Life expectancy", "type": "quantitative"},
+			{"field": "BMI", "type": "quantitative"}
+		],
+		"text": {
+			"field": "BMI",
+			"type": "quantitative"
+		}
+	},
+	"layer": [
+		{
+			"mark": "bar"
+		},
+		{
+			"mark": {
+				"type": "text",
+				"align": "center",
+				"baseline": "middle"
+			}
+		}
+	],
+	"config": {
+		"view": {"stroke": null},
+		"axis": {"grid": false}
+	}
+}

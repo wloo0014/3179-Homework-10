@@ -6,19 +6,14 @@
         <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
         <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.8"></script>
 
-        <title>Homework Week 10</title>
+        <title>Homework Week 9</title>
     </head>
     <body>
-        <div id="mapVis"></div>
-		<div id="barChart"></div>
+        <div id="mapVis">
+        </div>
         <script type="text/javascript">
-            var map = "js/map.vg.json";
-            vegaEmbed('#mapVis', map).then(function(result) {
-              // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-            }).catch(console.error);
-
-			var bar = "js/barchart.vg.json";
-            vegaEmbed('#barChart', bar).then(function(result) {
+            var spec2 = "data/vegalite.vg.json";
+            vegaEmbed('#mapVis', spec2).then(function(result) {
               // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
             }).catch(console.error);
           </script>

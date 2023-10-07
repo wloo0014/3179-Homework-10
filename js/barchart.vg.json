@@ -31,7 +31,7 @@
 		}
 	],
 	"transform": [
-		{"filter": {"param": "year_param"}}
+		{"filter": "datum.Year == year_param"}
 	],
 	"encoding": {
 		"x": {

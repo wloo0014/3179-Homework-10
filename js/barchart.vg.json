@@ -23,10 +23,9 @@
 	"params": [
 		{
 			"name": "year_param",
-			"select": {"type": "point", "fields": ["Year"]},
 			"value": 2000,
 			"bind": {
-				"Year": {"input": "range", "min": 2000, "max": 2015, "step": 1}
+				"input": "range", "min": 2000, "max": 2015, "step": 1
 			}
 		}
 	],
@@ -49,7 +48,7 @@
 		"color": {
 			"field": "Country",
 			"scale": {"range": ["#e60049", "#0bb4ff", "#50e991", "#e6d800", "#9b19f5", "#ffa300", "#dc0ab4", "#b3d4ff", "#00bfa0", "#7c1158"]},
-			"legend": {"orient": "top", "title": "Countries"}
+			"legend": null
 		},
 		"tooltip": [
 			{"field": "Country", "type": "nominal"},
